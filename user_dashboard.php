@@ -190,7 +190,49 @@ function get_user_issue_book_count() {
     </div>
 </nav><br>
 
+<div class="container">
+    <div class="row">
+        <?php
+        //use following names when creating your files
+        //book_register.php- CT059
+        //add_cat.php- CT075
+        //member_registration.php- CT023
+        //book_borrow.php- CT096
+        //assign_fine.php- CT024
+        $cards = array(
+            array("Books registration", "book_register.php", "1.jpg", "book_register.php", "secondary2.php", "View", "Manage"),
+            array("Category registration", "add_cat.php", "2.jpg", "secondary1.php", "secondary2.php", "View", "Manage"),
+            array("Member registration", "member_registration.php", "3.jpg", "secondary1.php", "secondary2.php", "View", "Manage"),
+            array("Borrow details", "book_borrow.php", "4.jpg", "secondary1.php", "secondary2.php", "View", "Manage"),
+            array("Assign Fine", "assign_fine.php", "5.jpg", "assign_fine.php", "secondary2.php", "View", "Manage"),
+        );
 
+        for ($i = 0; $i < 3; $i++) {
+            echo '<div class="col-md-4">';
+            echo '<div class="box centered-box" style="background-image: url(' . $cards[$i][2] . '); background-size: cover; background-position: center;">';
+
+
+            echo '<button class="btn btn-primary" onclick="window.location.href=\'' . $cards[$i][1] . '\'">Go to ' . $cards[$i][0] . '</button>';
+            echo '</div>';
+            echo '</div>';
+        }
+        ?>
+    </div>
+
+    <div class="row justify-content-center">
+        <?php
+        for ($i = 3; $i < 5; $i++) {
+            echo '<div class="col-md-4">';
+            echo '<div class="box centered-box" style="background-image: url(' . $cards[$i][2] . '); background-size: cover; background-position: center;">';
+
+
+            echo '<button class="btn btn-primary" onclick="window.location.href=\'' . $cards[$i][1] . '\'">Go to ' . $cards[$i][0] . '</button>';
+            echo '</div>';
+            echo '</div>';
+        }
+        ?>
+    </div>
+</div>
 
 <footer>
     Developed with ♡ by team wwwDot
